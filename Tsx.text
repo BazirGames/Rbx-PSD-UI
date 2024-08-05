@@ -1,0 +1,34 @@
+<screengui key="Example" ResetOnSpawn={false} ZIndexBehavior={'Sibling'}>
+    <frame key="Root" Size={UDim2.fromScale(1, 1)} Position={UDim2.fromScale(0, 0)} BackgroundTransparency={1}>
+        <uiaspectratioconstraint AspectRatio={1.78}/>
+        <frame key="Selected" Size={UDim2.fromScale(0.17, 0.33)} Position={UDim2.fromScale(0.41, 0.33)} BackgroundTransparency={1} ZIndex={1}>
+            <frame key="Base" Size={UDim2.fromScale(1.0, 1.0)} Position={UDim2.fromScale(0.0, 0.0)} BorderSizePixel={0} BackgroundTransparency={0.0} BackgroundColor3={Color3.fromRGB(255, 255, 255)}>
+                <uicorner CornerRadius={new UDim(0.08, 0)}/>
+                <uistroke Color={Color3.fromRGB(255, 153, 0)} Thickness={rem(5.0, "pixel")}/>
+                <uigradient Color={new ColorSequence([new ColorSequenceKeypoint(0.0, Color3.fromRGB(255, 153, 0)), new ColorSequenceKeypoint(0.28, Color3.fromRGB(255.0, 204.0, 127.5)), new ColorSequenceKeypoint(1.0, Color3.fromRGB(255, 255, 255))])} Rotation={-90.0}/>
+            </frame>
+            <frame key="Action" Size={UDim2.fromScale(0.92, 0.23)} Position={UDim2.fromScale(0.05, 0.49)} BackgroundTransparency={1} ZIndex={1}>
+                <frame key="Base" Size={UDim2.fromScale(1.0, 1.0)} Position={UDim2.fromScale(0.0, 0.0)} BorderSizePixel={0} BackgroundTransparency={0.0} BackgroundColor3={Color3.fromRGB(255, 255, 255)}>
+                    <uicorner CornerRadius={new UDim(0.3, 0)}/>
+                    <uigradient Color={new ColorSequence([new ColorSequenceKeypoint(0.0, Color3.fromRGB(0, 101, 0)), new ColorSequenceKeypoint(0.5, Color3.fromRGB(50.5, 178.0, 50.5)), new ColorSequenceKeypoint(1.0, Color3.fromRGB(101, 255, 101))])} Rotation={-90.0}/>
+                </frame>
+                <textlabel key="Equip" Size={UDim2.fromScale(0.51, 0.72)} Position={UDim2.fromScale(0.27, 0.14)} TextScaled={true} TextXAlignment={'Left'} BackgroundTransparency={1} RichText={true} Text={`<font face="FredokaOne" color="#FFFFFF">Equip</font>`} ZIndex={1}/>
+            </frame>
+            <frame key="Cancel" Size={UDim2.fromScale(0.92, 0.23)} Position={UDim2.fromScale(0.04, 0.74)} BackgroundTransparency={1} ZIndex={2}>
+                <frame key="Base" Size={UDim2.fromScale(1.0, 1.0)} Position={UDim2.fromScale(0.0, 0.0)} BorderSizePixel={0} BackgroundTransparency={0.0} BackgroundColor3={Color3.fromRGB(255, 255, 255)}>
+                    <uicorner CornerRadius={new UDim(0.3, 0)}/>
+                    <uigradient Color={new ColorSequence([new ColorSequenceKeypoint(0.0, Color3.fromRGB(101, 0, 0)), new ColorSequenceKeypoint(0.5, Color3.fromRGB(178.0, 25.5, 25.5)), new ColorSequenceKeypoint(1.0, Color3.fromRGB(255, 51, 51))])} Rotation={-90.0}/>
+                </frame>
+                <textlabel key="Cancel" Size={UDim2.fromScale(0.8, 0.72)} Position={UDim2.fromScale(0.25, 0.19)} TextScaled={true} TextXAlignment={'Left'} BackgroundTransparency={1} RichText={true} Text={`<font face="FredokaOne" color="#FFFFFF">Cancel</font>`} ZIndex={1}/>
+            </frame>
+            <frame key="Line" Size={UDim2.fromScale(0.85, 0.02)} Position={UDim2.fromScale(0.09, 0.45)} BorderSizePixel={0} BackgroundTransparency={0.0} BackgroundColor3={Color3.fromRGB(255, 153, 0)} ZIndex={3}/>
+            <frame key="Price" Size={UDim2.fromScale(0.74, 0.21)} Position={UDim2.fromScale(0.12, 0.23)} BackgroundTransparency={1} ZIndex={4}>
+                <textlabel key="Value" Size={UDim2.fromScale(0.69, 0.69)} Position={UDim2.fromScale(0.46, 0.2)} TextScaled={true} TextXAlignment={'Left'} BackgroundTransparency={1} RichText={true} Text={`<stroke color="#FF9900" thickness="${rem(5.0, "pixel")}"><font face="FredokaOne" color="#FFFFFF">99,999</font></stroke>`}/>
+                <imagelabel key="Coin" Size={UDim2.fromScale(0.3, 1.0)} Position={UDim2.fromScale(0.0, 0.0)} BackgroundTransparency={1} Image={'rbxgameasset://Images/Coin'} ZIndex={1}/>
+            </frame>
+            <textlabel key="Long Name" Size={UDim2.fromScale(0.78, 0.13)} Position={UDim2.fromScale(0.16, 0.08)} TextScaled={true} TextXAlignment={'Left'} BackgroundTransparency={1} RichText={true} Text={`<stroke color="#FF9900" thickness="${rem(5.0, "pixel")}"><font face="FredokaOne" color="#FFFFFF">Long Name</font></stroke>`} ZIndex={5}>
+                <uigradient Color={new ColorSequence([new ColorSequenceKeypoint(0.0, Color3.fromRGB(255, 153, 0)), new ColorSequenceKeypoint(0.28, Color3.fromRGB(255.0, 204.0, 127.5)), new ColorSequenceKeypoint(1.0, Color3.fromRGB(255, 255, 255))])} Rotation={-90.0}/>
+            </textlabel>
+        </frame>
+    </frame>
+</screengui>

@@ -2,3 +2,5 @@
 psd-tools
 requests
 Pillow
+directories
+argparse

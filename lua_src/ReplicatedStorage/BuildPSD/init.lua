@@ -3,9 +3,9 @@ local StarterGui = game:GetService("StarterGui")
 
 local ProcessType = require(script:WaitForChild("ProcessType"))
 
-local function make(layer)
+local function make(layer, top)
 	local frame = Instance.new(layer.ClassName)
-	for property, value in pairs(layer.Instance) do
+	for property, value in pairs(layer.Properties) do
 		if ProcessType[property] then
 			value = ProcessType[property](value)
 		end
@@ -14,8 +14,8 @@ local function make(layer)
 	return frame
 end
 
-local function makeAll(layer, parent)
-	local frame = make(layer)
+local function makeAll(layer, parent, top)
+	local frame = make(layer, top)
 	for _, child in pairs(layer.Children) do
 		makeAll(child, frame)
 	end
@@ -23,12 +23,9 @@ local function makeAll(layer, parent)
 	return frame
 end
 
-local function build(json)
-	local top = HttpService:JSONDecode(json)
-	local screen = Instance.new("ScreenGui")
-	local container = makeAll(top, screen)
-	container.ClipsDescendants = true
-	screen.Parent = StarterGui
+local function build(top)
+	---local top = HttpService:JSONDecode(json)
+	return makeAll(top, StarterGui, true)
 end
 
 return build

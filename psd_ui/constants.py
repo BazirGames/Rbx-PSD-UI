@@ -1,0 +1,1 @@
+default_image_holder = "rbxasset://textures/ui/GuiImagePlaceholder.png"
